@@ -13,7 +13,8 @@ const CreateSchema = new mongoose.Schema({
     destination : {
         type : String,
         required : true
-    }
+    }, 
+    
 
 });
 

@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 
 const createRider = require("./routes/createRide");
 const searchRider = require("./routes/searchRide");
-
+const getInfo = require("./routes/getInfo");
 app.use(cors({
   origin:true,  // Replace with your frontend domain
   methods: ['GET', 'POST'],                // Allow specific HTTP methods (GET, POST, etc.)
@@ -20,6 +20,7 @@ app.use(express.json());
 
 app.use(createRider);
 app.use(searchRider);
+app.use(getInfo);
 
 const server = http.createServer(app);
 
