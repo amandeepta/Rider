@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 const Create = require('../models/create');
 
-router.get('/info', async (req, res) => {
+router.post('/info', async (req, res) => {
     try {
-        const { id } = req.body;
+        const {id} = req.body;
+        console.log(id);
         const user = await Create.findById(id);
         
         if (!user) {
